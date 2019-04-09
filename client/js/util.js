@@ -628,7 +628,9 @@ var qq = function(element) {
         return function(html) {
             div.innerHTML = html;
             var element = div.firstChild;
-            div.removeChild(element);
+            if(element) {
+              div.removeChild(element);
+            }
             return element;
         };
     }());
